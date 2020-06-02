@@ -24,3 +24,8 @@ end
 task :environment do 
   require_relative './config/environment'
 end
+
+desc 'drop into the Pry console'
+task :consol => :environment do 
+  Pry.start 
+end
